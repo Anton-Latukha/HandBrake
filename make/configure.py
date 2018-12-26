@@ -1352,7 +1352,7 @@ def createCLI():
     ## add Xcode options
     if host.match( '*-*-darwin*' ):
         grp = OptionGroup( cli, 'Xcode Options' )
-        grp.add_option( '--disable-xcode', default=False, action='store_true',
+        grp.add_option( '--disable-xcode', dest="disable_xcode", default=False, action='store_true',
             help='disable Xcode' )
         grp.add_option( '--xcode-prefix', default=cfg.xcode_prefix_dir, action='store', metavar='DIR',
             help='specify install dir for Xcode products [%s]' % (cfg.xcode_prefix_dir) )
